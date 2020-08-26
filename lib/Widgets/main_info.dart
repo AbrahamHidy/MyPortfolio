@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio/Widgets/link_button.dart';
 import 'package:my_portfolio/services/link_opener.dart';
 
 class MainInfo extends StatelessWidget {
-  LinkOpener linkOpener = new LinkOpener();
+  final LinkOpener linkOpener = new LinkOpener();
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -11,7 +12,7 @@ class MainInfo extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: MediaQuery.of(context).size.width / 8,
-          backgroundImage: AssetImage("images/profileImage.jpg"),
+          backgroundImage: AssetImage("assets/images/profileImage.jpg"),
         ),
         SizedBox(
           width: MediaQuery.of(context).size.width * 0.06,
@@ -21,30 +22,45 @@ class MainInfo extends StatelessWidget {
           //height: MediaQuery.of(context).size.width / 4,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Abraham Hidy-Veksler',
-                style: TextStyle(
-                  fontSize: 35,
-                  color: Colors.blue,
-                  fontWeight: FontWeight.bold,
+                style: GoogleFonts.poiretOne(
+                  textStyle: TextStyle(
+                    fontSize: 38,
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
               Text(
-                "Passionate for developing software for a positive impact on the world. Knowledge of Flutter and Java. Growing skills in Angular developement.",
-                style: TextStyle(
-                  fontSize: 25,
+                "Passionate for developing software for a positive impact on the world.\nKnowledge of Flutter and Java. Growing skills in Angular.",
+                style: GoogleFonts.openSans(
+                  textStyle: TextStyle(
+                    fontSize: 24,
+                  ),
                 ),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
+                  LinkButton(
+                    text: 'GitHub',
+                    onPressed: () {
+                      linkOpener
+                          .launchInBrowser("https://github.com/AbrahamHidy");
+                    },
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.01,
+                  ),
                   LinkButton(
                     text: 'My Resume',
                     onPressed: () {
