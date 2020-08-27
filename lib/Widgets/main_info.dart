@@ -7,11 +7,14 @@ class MainInfo extends StatelessWidget {
   final LinkOpener linkOpener = new LinkOpener();
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Wrap(
+      alignment: WrapAlignment.center,
+      crossAxisAlignment: WrapCrossAlignment.center,
       children: [
         CircleAvatar(
-          radius: MediaQuery.of(context).size.width / 8,
+          radius: MediaQuery.of(context).size.width < 1000
+              ? 50 + MediaQuery.of(context).size.width / 8
+              : 180,
           backgroundImage: AssetImage("assets/images/profileImage.jpg"),
         ),
         SizedBox(
@@ -48,8 +51,8 @@ class MainInfo extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+              Wrap(
+                alignment: WrapAlignment.start,
                 children: [
                   LinkButton(
                     text: 'GitHub',

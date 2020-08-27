@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/Widgets/main_info.dart';
 import 'package:my_portfolio/Widgets/menu_row.dart';
+import 'package:my_portfolio/Widgets/project_bubble.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -41,7 +42,17 @@ class HomePage extends StatelessWidget {
                   'Projects',
                   style: TextStyle(fontSize: 25, letterSpacing: 2),
                 ),
-                //GridView.count(crossAxisCount: 3),
+                GridView.count(
+                  shrinkWrap: true,
+                  crossAxisCount: 3,
+                  children: [
+                    ProjectBubble(),
+                    ProjectBubble(),
+                    ProjectBubble(),
+                    ProjectBubble(),
+                    ProjectBubble(),
+                  ],
+                ),
               ],
             ),
           ),
