@@ -21,8 +21,9 @@ class MainInfo extends StatelessWidget {
           width: MediaQuery.of(context).size.width * 0.06,
         ),
         Container(
-          width: MediaQuery.of(context).size.width / 2,
-          //height: MediaQuery.of(context).size.width / 4,
+          width: MediaQuery.of(context).size.width > 1000
+              ? MediaQuery.of(context).size.width / 2
+              : MediaQuery.of(context).size.width / 1.18,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
