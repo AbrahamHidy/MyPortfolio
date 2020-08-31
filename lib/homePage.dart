@@ -42,16 +42,16 @@ class HomePage extends StatelessWidget {
                   'Projects',
                   style: TextStyle(fontSize: 25, letterSpacing: 2),
                 ),
-                GridView.count(
-                  shrinkWrap: true,
-                  crossAxisCount: 3,
-                  children: [
-                    ProjectBubble(),
-                    ProjectBubble(),
-                    ProjectBubble(),
-                    ProjectBubble(),
-                    ProjectBubble(),
-                  ],
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width * 0.3),
+                  child: GridView.count(
+                    shrinkWrap: true,
+                    crossAxisCount: 1,
+                    children: [
+                      ProjectBubble(AssetImage("assets/images/cloud_calc.jpg")),
+                    ],
+                  ),
                 ),
               ],
             ),
