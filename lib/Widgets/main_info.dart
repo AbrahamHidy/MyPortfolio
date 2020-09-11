@@ -69,7 +69,7 @@ class MainInfo extends StatelessWidget {
                     text: 'My Resume',
                     onPressed: () {
                       linkOpener.launchInBrowser(
-                          "https://drive.google.com/file/d/1WjSXmsGZ95BoV-kmrnm4q2cFz6gogMMA/view?usp=sharing");
+                          "https://drive.google.com/file/d/1BbAVsRP29guxucElPD3fxvcL9B3yaD3d/view?usp=sharing");
                     },
                   ),
                   SizedBox(
