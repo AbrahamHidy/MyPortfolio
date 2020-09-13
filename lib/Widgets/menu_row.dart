@@ -12,8 +12,7 @@ class MenuRow extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         MaterialButton(
-          onPressed: () => Navigator.push(
-              context, MaterialPageRoute(builder: (context) => HomePage())),
+          onPressed: () => Navigator.pushNamed(context, HomePage.route),
           child: Image.asset(
             "assets/images/AHV Logo.png",
             height: 40,
@@ -24,8 +23,7 @@ class MenuRow extends StatelessWidget {
             PageButton(
               text: "About",
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => AboutPage()));
+                Navigator.pushNamed(context, AboutPage.route);
               },
             ),
             SizedBox(
@@ -34,8 +32,7 @@ class MenuRow extends StatelessWidget {
             PageButton(
               text: "Contact",
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ContactPage()));
+                Navigator.pushNamed(context, ContactPage.route);
               },
             ),
           ],
