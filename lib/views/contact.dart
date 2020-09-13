@@ -3,6 +3,8 @@ import 'package:my_portfolio/Widgets/contact_row.dart';
 import 'package:my_portfolio/Widgets/menu_row.dart';
 
 class ContactPage extends StatelessWidget {
+  static const String route = '/contact';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

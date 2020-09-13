@@ -5,6 +5,8 @@ import 'package:my_portfolio/Widgets/link_button.dart';
 import 'package:my_portfolio/Widgets/menu_row.dart';
 
 class AboutPage extends StatelessWidget {
+  static const String route = '/about';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

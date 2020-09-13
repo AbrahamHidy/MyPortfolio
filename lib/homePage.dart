@@ -4,6 +4,8 @@ import 'package:my_portfolio/Widgets/menu_row.dart';
 import 'package:my_portfolio/Widgets/project_bubble.dart';
 
 class HomePage extends StatelessWidget {
+  static const String route = '/homePage';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
