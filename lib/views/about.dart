@@ -47,7 +47,7 @@ class AboutPage extends StatelessWidget {
                   ),
                   AboutItem(
                     text:
-                        "I am a software developer with competencies in Flutter and Angular frameworks, as well as in Java.\n\nDuring my education, I have Studied and lived in the United States, Austria, and Sweden in the engineering and software fields, gaining a strong respect for the strength of international teams.",
+                        "I am a software developer with competencies in Flutter and Java, as well as a basic and growing understanding of Angular.\n\nDuring my education, I have Studied and lived in the United States, Austria, and Sweden in the engineering and software fields, gaining a strong respect for the strength of international teams.",
                   ),
                   AboutItem(
                     text:
@@ -59,7 +59,7 @@ class AboutPage extends StatelessWidget {
                   ),
                   AboutItem(
                     text:
-                        "Currently searching for employment in a trainee or junion position as in order to contribute to meaningful projects.",
+                        "Currently searching for employment in a trainee or junion position in order to contribute to meaningful projects.",
                   ),
                 ],
               ),
